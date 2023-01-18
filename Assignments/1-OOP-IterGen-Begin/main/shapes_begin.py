@@ -54,6 +54,7 @@ class Triangle(Shape):
             math.sqrt(math.pow(self._base - side2*math.cos(angle12Rad), 2) + \
                       math.pow(self._height,2))
         return
+
     def area(self):
         return self._base * self._height/2
     def circumference(self):

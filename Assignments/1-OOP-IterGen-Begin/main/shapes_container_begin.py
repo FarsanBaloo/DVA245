@@ -10,7 +10,6 @@ import shapes_begin as shapes
 class ShapesContainer:
     def __init__(self):
         self._shapesList = []
-        self.countshapes = 0
     def append(self, shape):
         self._shapesList.append(shape)
     def __iter__(self):
@@ -18,9 +17,11 @@ class ShapesContainer:
             yield s
     def areas(self):
         # TODO implement a generator that generates areas for all
+        for shape in self._shapesList:
+            yield shape.area()
 
-        # shapes in self._shapesList. Use the yield keyword.
-        pass
+
+
             
     
 def main():
@@ -32,13 +33,14 @@ def main():
     shapesCont.append(shapes.Triangle("t3", "black", 2, 2, 60))
     shapesCont.append(shapes.Rectangle("r1", "yellow", 1, 2))
     shapesCont.append(shapes.Rectangle("r2", "black", 5, 2))
+
     for s in shapesCont:
         s.printInfo()
     areaSum = 0
     for a in shapesCont.areas():
-        areaSum+=a
-    print("Total area: " + str(areaSum))    
+        areaSum += a
 
+    print("Total area: " + str(areaSum))
 
 if __name__ == '__main__':
     main()
