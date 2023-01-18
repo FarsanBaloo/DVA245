@@ -3,6 +3,7 @@
 Created on Fri Sep 17 11:53:48 2021
 
 @author: afe02
+@ revised RiSo 18-Jan 2023
 """
 
 import math
@@ -62,12 +63,16 @@ class Rectangle(Shape):
     """The Rectangle class implements a rectangle with a given base and height"""
     def __init__(self, name, color, base, height):
         # TODO implement the Rectangle constructor
-        pass
+        super().__init__(name, color)
+        self._base = base
+        self._height = height
+        return
+
     def area(self):
         # TODO implement the Rectangle area method
-        pass
+        return self._base*self._height
     def circumference(self):
         # TODO implement the Rectangle circumference method
-        pass
+        return 2*(self._base+self._height)
     
 

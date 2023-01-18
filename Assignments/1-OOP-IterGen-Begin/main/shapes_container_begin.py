@@ -10,6 +10,7 @@ import shapes_begin as shapes
 class ShapesContainer:
     def __init__(self):
         self._shapesList = []
+        self.countshapes = 0
     def append(self, shape):
         self._shapesList.append(shape)
     def __iter__(self):
@@ -17,6 +18,7 @@ class ShapesContainer:
             yield s
     def areas(self):
         # TODO implement a generator that generates areas for all
+
         # shapes in self._shapesList. Use the yield keyword.
         pass
             
