@@ -21,9 +21,6 @@ class ShapesContainer:
             yield shape.area()
 
 
-
-            
-    
 def main():
     shapesCont = ShapesContainer()
     shapesCont.append(shapes.Circle("c1", "green", 1))
