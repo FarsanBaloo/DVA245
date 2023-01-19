@@ -61,8 +61,10 @@ class Triangle(Shape):
 class Rectangle(Shape):
     """The Rectangle class implements a rectangle with a given base and height"""
     def __init__(self, name, color, base, height):
+        self.base = base
+        self.height = height
+        super().__init__(name, color)
         # TODO implement the Rectangle constructor
-        pass
     def area(self):
         # TODO implement the Rectangle area method
         pass
