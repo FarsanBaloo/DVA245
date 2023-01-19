@@ -7,7 +7,6 @@ Created on Fri Sep 17 11:53:48 2021
 
 import shapes_begin as shapes
 
-
 class ShapesContainer:
     def __init__(self):
         self._shapesList = []
@@ -26,6 +25,7 @@ class ShapesContainer:
         # TODO implement a generator that generates areas for all
         # shapes in self._shapesList. Use the yield keyword.
         # pass
+        # HEJ HEJ RICKARD
             
     
 def main():
