@@ -67,8 +67,6 @@ class Rectangle(Shape):
         super().__init__(name, color)
         self._base = base
         self._height = height
-        return
-
     def area(self):
         # TODO implement the Rectangle area method
         return self._base*self._height
