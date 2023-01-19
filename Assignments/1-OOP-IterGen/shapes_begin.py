@@ -67,9 +67,9 @@ class Rectangle(Shape):
         # TODO implement the Rectangle constructor
     def area(self):
         # TODO implement the Rectangle area method
-        pass
+        return self.base * self.height
     def circumference(self):
         # TODO implement the Rectangle circumference method
-        pass
+        return (self.base * 2) + (self.height * 2)
     
 
