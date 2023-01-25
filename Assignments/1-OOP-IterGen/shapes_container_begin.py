@@ -4,7 +4,6 @@ Created on Fri Sep 17 11:53:48 2021
 
 @author: afe02
 """
-
 import shapes_begin as shapes
 
 class ShapesContainer:
