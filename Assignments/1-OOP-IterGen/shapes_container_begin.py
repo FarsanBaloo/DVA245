@@ -24,9 +24,8 @@ class ShapesContainer:
 
         # TODO implement a generator that generates areas for all
         # shapes in self._shapesList. Use the yield keyword.
-        # pass
-        # HEJ HEJ RICKARD
-            
+
+
     
 def main():
     shapesCont = ShapesContainer()
