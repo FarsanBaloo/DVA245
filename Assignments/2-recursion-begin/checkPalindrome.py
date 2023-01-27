@@ -5,6 +5,15 @@ TODO: implement recursiveCheckPalindrome
 """
 
 def recursiveCheckPalindrome(word):
+
+    if len(word) <= 1:
+        return True
+
+    if word[0].lower() == word[-1].lower():
+       recursiveCheckPalindrome(word[1:-1])
+    else:
+        return False
+
     # TODO implement
     # What is the base case?
     # How can we solve a small part of the problem
