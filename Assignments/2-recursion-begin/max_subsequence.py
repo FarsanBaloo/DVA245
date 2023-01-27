@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+import random
+import time
+from matplotlib import pyplot as plt
+
 """
 Anna Friebe for DVA45
 
@@ -7,7 +11,10 @@ contiguous subsequence of the list S
 
 @author: afe02
 """
-
+listLength = []
+for i in range(1000):
+    listLength.append(150 * i + 1)
+#listLength = [80, 160, 320, 640, 1280, 2560, 5120, 10240, 20480]
 def max_subsequence1(S):
     maxSum = 0
     # iterate through all possible left indices for subsequences
@@ -59,3 +66,35 @@ def max_subsequence3(S):
         if testSum < 0:
             testSum = 0
     return maxSum
+
+
+def timeInFunctionCall(fun, listLength):
+    testList = random.sample(range(-1000000, 1000000), listLength)
+    timePrior = time.process_time()
+    fun(testList)
+    timeDuration = time.process_time() - timePrior
+    return timeDuration
+
+
+def timeInFunctionCalls(fun, listLength):
+    results = []
+    for length in listLength:
+        results.append(timeInFunctionCall(fun, length))
+    return results
+
+
+def plotlib(fun, listLength):
+    plt.figure()
+    plt.plot(listLength, timeInFunctionCalls(fun, listLength))
+    plt.xlabel('Lengths')
+    plt.ylabel('Time')
+    plt.show()
+
+
+#plotlib(max_subsequence1, listLength)
+#plotlib(max_subsequence2, listLength)
+plotlib(max_subsequence3, listLength)
+
+
+
+

@@ -4,13 +4,15 @@ TODO: implement recursiveCheckPalindrome
 
 """
 
-def recursiveCheckPalindrome(word):
+
+def recursiveCheckPalindrome(word: str):
 
     if len(word) <= 1:
         return True
-
-    if word[0].lower() == word[-1].lower():
-       recursiveCheckPalindrome(word[1:-1])
+    elif len(word) <= 3 and word[0].lower() == word[-1].lower():
+        return True
+    elif word[0].lower() == word[-1].lower():
+       return recursiveCheckPalindrome(word[1:-1])
     else:
         return False
 
@@ -21,6 +23,6 @@ def recursiveCheckPalindrome(word):
     # initial problem?
     # Use lower() to make the method case insensitive
     # return True if word is a palindrome, False otherwise
-    return 
+    # return
 
 
