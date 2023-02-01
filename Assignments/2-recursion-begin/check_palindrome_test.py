@@ -12,6 +12,8 @@ import checkPalindrome
 class CheckPalindromeTest(unittest.TestCase):
     def testPalindrome(self):
         self.assertTrue(checkPalindrome.recursiveCheckPalindrome("Apa"))
+        self.assertTrue(checkPalindrome.recursiveCheckPalindrome("Ö"))
+        self.assertTrue(checkPalindrome.recursiveCheckPalindrome("Alla"))
         self.assertFalse(checkPalindrome.recursiveCheckPalindrome("Myra"))
         self.assertTrue(checkPalindrome.recursiveCheckPalindrome("Naturrutan"))
         

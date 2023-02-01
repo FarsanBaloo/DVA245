@@ -7,9 +7,7 @@ TODO: implement recursiveCheckPalindrome
 
 def recursiveCheckPalindrome(word: str):
 
-    if len(word) <= 1:
-        return True
-    elif len(word) <= 3 and word[0].lower() == word[-1].lower():
+    if len(word) <= 3 and word[0].lower() == word[-1].lower():
         return True
     elif word[0].lower() == word[-1].lower():
        return recursiveCheckPalindrome(word[1:-1])
