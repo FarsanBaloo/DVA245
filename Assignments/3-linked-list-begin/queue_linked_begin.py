@@ -11,7 +11,8 @@ class LinkedQueue:
     
     def enqueue(self,item):
         """TODO: Implement enqueue"""
-        pass
+        self.items.append(item)
+
         
     def front(self):
         """TODO: Implement front"""
