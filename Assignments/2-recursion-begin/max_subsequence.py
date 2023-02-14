@@ -12,9 +12,9 @@ contiguous subsequence of the list S
 @author: afe02
 """
 listLength = []
-for i in range(1000):
-    listLength.append(150 * i + 1)
-#listLength = [80, 160, 320, 640, 1280, 2560, 5120, 10240, 20480]
+for i in range(30):
+    listLength.append(25000 * i + 1)
+#listLength = [1000, 2000]
 def max_subsequence1(S):
     maxSum = 0
     # iterate through all possible left indices for subsequences
@@ -90,10 +90,9 @@ def plotlib(fun, listLength):
     plt.ylabel('Time')
     plt.show()
 
-
-#plotlib(max_subsequence1, listLength)
-#plotlib(max_subsequence2, listLength)
 plotlib(max_subsequence3, listLength)
+print(listLength)
+
 
 
 
