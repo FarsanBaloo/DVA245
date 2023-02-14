@@ -101,11 +101,31 @@ class LinkedList:
     
     def __contains__(self,item):
         # TODO: implement __contains__
-        pass
+        if item in self.__iter__():
+            return True
+        else:
+            return False
+
  
     def __delitem__(self,index):
-        # TODO: implement __delitem__ 
-        pass 
+        # TODO: implement __delitem__
+        if index < 0 or index >= self.numItems:
+            raise IndexError('Index out of range')
+
+        cursor = self.first
+        delCursor = cursor.getNext()
+
+        for i in range(0, index):
+            cursor = delCursor
+            delCursor = cursor.getNext()
+
+        next = delCursor.getNext()
+        cursor.setNext(next)
+
+        if delCursor == self.last:
+            self.last = cursor
+        self.numItems = self.numItems - 1
+
             
     def __eq__(self,other):
         if type(other) != type(self):
@@ -126,7 +146,11 @@ class LinkedList:
     
     def __iter__(self):
         # TODO: implement __iter__.
-        pass
+        current = self.first.getNext()
+        #for i in range(self.numItems):
+        while current is not None:
+            yield current.getItem()
+            current = current.getNext()
             
     def __len__(self):
         # TODO: implement __len__.
