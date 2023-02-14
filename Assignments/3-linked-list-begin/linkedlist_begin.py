@@ -154,7 +154,13 @@ class LinkedList:
             
     def __len__(self):
         # TODO: implement __len__.
-        pass
+        count = 0
+        current = self.first.getNext()
+        while current:
+            count += 1
+            current = current.getNext()
+        return count
+
 
     def append(self,item):
         node = LinkedList.__Node(item)

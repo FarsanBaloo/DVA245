@@ -7,7 +7,9 @@ class LinkedQueue:
                  
     def dequeue(self):
         """TODO: Implement dequeue"""
-        pass
+        first = self.items.first.getNext()
+        self.items.__delitem__(0)
+        return first.getItem()
     
     def enqueue(self,item):
         """TODO: Implement enqueue"""
@@ -16,14 +18,15 @@ class LinkedQueue:
         
     def front(self):
         """TODO: Implement front"""
-        pass
+        return self.items.first.getNext().getItem()
         
     
     def isEmpty(self):
         """TODO: Implement isEmpty"""
-        pass
+        return self.items.numItems == 0
+
 
     def clear(self):
         """TODO: Implement clear"""
-        pass
+        self.items = LinkedList()
 
