@@ -7,9 +7,9 @@ class LinkedQueue:
                  
     def dequeue(self):
         """TODO: Implement dequeue"""
-        first = self.items.first.getNext()
-        self.items.__delitem__(0)
-        return first.getItem()
+        first = self.front()
+        del self.items[0]
+        return first
     
     def enqueue(self,item):
         """TODO: Implement enqueue"""

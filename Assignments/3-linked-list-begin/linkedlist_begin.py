@@ -101,8 +101,8 @@ class LinkedList:
     
     def __contains__(self,item):
         # TODO: implement __contains__
-        for s in self:
-            if s == item:
+        for element in self:
+            if element == item:
                 return True
         return False
     """

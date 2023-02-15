@@ -7,9 +7,9 @@ class LinkedStack:
                  
     def pop(self):
         """TODO: Implement push"""
-        last = self.items.last
-        self.items.__delitem__(self.items.numItems-1)
-        return last.getItem()
+        last = self.top()
+        del self.items[len(self.items)-1]
+        return last
     
     def push(self,item):
         """TODO: Implement pop"""
