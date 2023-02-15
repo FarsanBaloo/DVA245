@@ -101,11 +101,16 @@ class LinkedList:
     
     def __contains__(self,item):
         # TODO: implement __contains__
+        for s in self:
+            if s == item:
+                return True
+        return False
+    """
         if item in self.__iter__():
             return True
         else:
             return False
-
+    """
  
     def __delitem__(self,index):
         # TODO: implement __delitem__
@@ -147,7 +152,7 @@ class LinkedList:
     def __iter__(self):
         # TODO: implement __iter__.
         current = self.first.getNext()
-        #for i in range(self.numItems):
+        #for i in range(len(self)):
         while current is not None:
             yield current.getItem()
             current = current.getNext()
