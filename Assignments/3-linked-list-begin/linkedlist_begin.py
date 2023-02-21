@@ -195,4 +195,4 @@ class LinkedList:
         retStr += "numItems: "
         retStr += str(self.numItems)
         return retStr
-                
+
