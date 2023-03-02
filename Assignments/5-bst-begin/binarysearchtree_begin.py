@@ -71,17 +71,24 @@ class BinarySearchTree:
 
     def min(self):
         # TODO: Implement min, that uses the recursive __min
-        pass
+        if self.root is None:
+            return None
+        return BinarySearchTree.__min(self.root)
+
     def __min(root):
         # TODO: Implement the recursive __min, that returns the minimum of a subtree with the given root
         pass 
     def max(self):
         # TODO: Implement max, that uses the recursive __max
-        pass
+        if self.root is None:
+            return None
+        return BinarySearchTree.__max(self.root)
 
     def __max(root):
         # TODO: Implement the recursive __max, that returns the maximum of a subtree with the given root
-        pass
+        if root.right is None:
+            return root.val
+        return BinarySearchTree.__max(root.right)
 
     def remove(self, val):
         # TODO: Implement remove, that uses the recursive __remove
@@ -90,7 +97,6 @@ class BinarySearchTree:
     def __remove(root, val):
         # TODO: Implement the recursive __remove that deletes val from the subtree with the given root
         # __remove returns the new subtree
-        pass
 
     def __contains__(self, val):
         # TODO: Implement __contains__, that uses the recursive __contains
